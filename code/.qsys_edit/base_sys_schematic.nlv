@@ -1,0 +1,24 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst base_sys.sys_id -pg 1 -lvl 3 -y 30
+preplace inst base_sys.nios2_cpu.reset_bridge -pg 1
+preplace inst base_sys.nios2_cpu.clock_bridge -pg 1
+preplace inst base_sys.sys_timer -pg 1 -lvl 3 -y 350
+preplace inst base_sys.sys_clk -pg 1 -lvl 1 -y 410
+preplace inst base_sys.sys_jtag_uart -pg 1 -lvl 3 -y 250
+preplace inst base_sys.sys_mem -pg 1 -lvl 3 -y 110
+preplace inst base_sys.nios2_cpu.cpu -pg 1
+preplace inst base_sys.sys_pio_out -pg 1 -lvl 3 -y 570
+preplace inst base_sys -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst base_sys.nios2_cpu -pg 1 -lvl 2 -y 280
+preplace inst base_sys.sys_pio_in -pg 1 -lvl 3 -y 450
+preplace netloc INTERCONNECT<net_container>base_sys</net_container>(SLAVE)sys_pio_out.reset,(SLAVE)sys_timer.reset,(SLAVE)sys_pio_in.reset,(MASTER)sys_clk.clk_reset,(SLAVE)nios2_cpu.reset,(SLAVE)sys_jtag_uart.reset,(SLAVE)sys_id.reset,(SLAVE)sys_mem.reset2,(MASTER)nios2_cpu.debug_reset_request,(SLAVE)sys_mem.reset1) 1 1 2 300 440 740
+preplace netloc INTERCONNECT<net_container>base_sys</net_container>(SLAVE)sys_id.control_slave,(SLAVE)sys_pio_in.s1,(SLAVE)sys_pio_out.s1,(SLAVE)nios2_cpu.debug_mem_slave,(SLAVE)sys_mem.s1,(SLAVE)sys_jtag_uart.avalon_jtag_slave,(SLAVE)sys_timer.s1,(SLAVE)sys_mem.s2,(MASTER)nios2_cpu.instruction_master,(MASTER)nios2_cpu.data_master) 1 1 2 320 460 680
+preplace netloc EXPORT<net_container>base_sys</net_container>(SLAVE)base_sys.pio_leds,(SLAVE)sys_pio_out.external_connection) 1 0 3 NJ 600 NJ 600 NJ
+preplace netloc EXPORT<net_container>base_sys</net_container>(SLAVE)sys_clk.clk_in,(SLAVE)base_sys.clk_0) 1 0 1 NJ
+preplace netloc EXPORT<net_container>base_sys</net_container>(SLAVE)base_sys.reset,(SLAVE)sys_clk.clk_in_reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>base_sys</net_container>(MASTER)nios2_cpu.irq,(SLAVE)sys_pio_in.irq,(SLAVE)sys_jtag_uart.irq,(SLAVE)sys_timer.irq) 1 2 1 700
+preplace netloc EXPORT<net_container>base_sys</net_container>(SLAVE)sys_pio_in.external_connection,(SLAVE)base_sys.pio_input) 1 0 3 NJ 480 NJ 480 NJ
+preplace netloc FAN_OUT<net_container>base_sys</net_container>(SLAVE)sys_pio_in.clk,(SLAVE)sys_timer.clk,(SLAVE)sys_pio_out.clk,(SLAVE)sys_id.clk,(SLAVE)sys_mem.clk1,(SLAVE)nios2_cpu.clk,(SLAVE)sys_jtag_uart.clk,(MASTER)sys_clk.clk,(SLAVE)sys_mem.clk2) 1 1 2 280 420 720
+levelinfo -pg 1 0 70 930
+levelinfo -hier base_sys 80 110 440 770 920
