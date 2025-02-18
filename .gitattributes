@@ -2,3 +2,4 @@
 *.v linguist-language=SystemVerilog
 # Ignore Verilog completely
 *.v linguist-detectable=false
+*.c linguist-detectable=false
