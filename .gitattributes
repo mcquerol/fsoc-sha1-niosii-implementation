@@ -1,13 +1,11 @@
 # Ignore everything outside software/
-code/* linguist-vendor
-code/.qsys_edit/** linguist-vendor
-code/base_sys/** linguist-vendor
-code/db/** linguist-vendor
-code/incremental_db/** linguist-vendor
-code/output_files/** linguist-vendor
-
-# Specifically allow the software/ folder to count
-code/software/** linguist-language=SystemVerilog
+code/* linguist-generated
+code/.qsys_edit/** linguist-generated
+code/base_sys/** linguist-generated
+code/db/** linguist-generated
+code/incremental_db/** linguist-generated
+code/output_files/** linguist-generated
+code/software/base_sys_eval_bsp/** linguist-generated
 
 # (Optional) Force SystemVerilog language tagging
 *.sv linguist-language=SystemVerilog
