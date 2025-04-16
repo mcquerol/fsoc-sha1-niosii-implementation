@@ -1,10 +1,10 @@
 # Ignore everything outside software/
-code/* linguist-generated
-code/.qsys_edit/** linguist-generated
-code/base_sys/** linguist-generated
-code/db/** linguist-generated
-code/incremental_db/** linguist-generated
-code/output_files/** linguist-generated
+code/* linguist-documentation
+code/.qsys_edit/** linguist-documentation
+code/base_sys/** linguist-documentation
+code/db/** linguist-documentation
+code/incremental_db/** linguist-documentation
+code/output_files/** linguist-documentation
 
 # Specifically allow the software/ folder to count
 code/software/** linguist-language=SystemVerilog
