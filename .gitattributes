@@ -1,2 +1,54 @@
-*.v linguistic-language=Systemverilog
-*.sv linguistic-language=Systemverilog
+# ========================
+# 🎯 LANGUAGE FILTERING
+# ========================
+
+# Hide non-source folders (Qsys, Quartus, etc.)
+code/.qsys_edit/** linguist-generated
+code/base_sys/** linguist-generated
+code/db/** linguist-generated
+code/incremental_db/** linguist-generated
+code/output_files/** linguist-generated
+code/simulation/** linguist-generated
+
+# Optional: hide generated headers, logs, and synthesis files
+*.qip linguist-generated
+*.sdc linguist-generated
+*.sdf linguist-generated
+*.vcd linguist-generated
+*.qsf linguist-generated
+*.csv linguist-generated
+
+# ========================
+# 🧠 MANUAL OVERRIDES
+# ========================
+
+# Specifically allow C code in software/
+code/software/** linguist-language=C
+
+# Optional: prevent HDL from taking over if mixed into other dirs
+*.sv linguist-language=SystemVerilog
+*.v  linguist-generated
+
+# Explicitly declare C headers and source
+*.c linguist-language=C
+*.h linguist-language=C
+
+# ========================
+# 📘 DOCS AND TOOLING
+# ========================
+
+*.html linguist-documentation
+*.css  linguist-documentation
+*.js   linguist-documentation
+*.md   linguist-documentation
+*.pdf  linguist-documentation
+
+# Ignore Makefiles (if not meaningful to show)
+Makefile linguist-generated
+
+# Ignore Assembly / startup
+*.s linguist-vendored
+*.asm linguist-vendored
+
+# Ignore Tcl (common in EDA/FPGA flows)
+*.tcl linguist-vendored
