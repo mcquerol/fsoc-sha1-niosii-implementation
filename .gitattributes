@@ -26,8 +26,8 @@ code/software/base_sys_eval/** linguist-generated
 code/software/base_sys_eval_bsp/** linguist-generated
 
 # Optional: prevent HDL from taking over if mixed into other dirs
-*.sv linguist-language=C
-*.v  linguist-language=SystemVerilog
+*.sv linguist-language=SystemVerilog
+*.v  linguist-generated
 
 # Explicitly declare C headers and source
 *.c linguist-language=C
