@@ -22,9 +22,6 @@ code/simulation/** linguist-generated
 # 🧠 MANUAL OVERRIDES
 # ========================
 
-# Specifically allow C code in software/
-code/software/** linguist-language=C
-
 # Optional: prevent HDL from taking over if mixed into other dirs
 *.sv linguist-language=SystemVerilog
 *.v  linguist-generated
