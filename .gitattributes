@@ -27,7 +27,7 @@ code/software/base_sys_eval_bsp/** linguist-language=SystemVerilog
 
 # Optional: prevent HDL from taking over if mixed into other dirs
 *.sv linguist-language=SystemVerilog
-*.v  linguist-language=C
+*.v  linguist-language=SystemVerilog
 
 # Explicitly declare C headers and source
 *.c linguist-language=C
