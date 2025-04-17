@@ -8,8 +8,8 @@ code/output_files/** linguist-generated
 # code/software/base_sys_eval_bsp/** linguist-generated
 
 # Specifically allow the software/ folder to count
-code/software/base_sys_eval_bsp/** linguist-language=SystemVerilog
-code/software/base_sys_eval/** linguist-language=C
+code/software/base_sys_eval_bsp/** linguist-language=C
+code/software/base_sys_eval/** linguist-language=SystemVerilog
 
 # (Optional) Force SystemVerilog language tagging
 *.sv linguist-language=SystemVerilog
