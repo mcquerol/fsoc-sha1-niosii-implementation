@@ -5,13 +5,19 @@ code/base_sys/** linguist-generated
 code/db/** linguist-generated
 code/incremental_db/** linguist-generated
 code/output_files/** linguist-generated
-#code/software/base_sys_eval_bsp/** linguist-generated
- 
-# Specifically allow the software/ folder to count
-code/software/base_sys_eval_bsp/** linguist-language=SystemVerilog
-code/software/base_sys_eval/** linguist-language=C
 
+# Specifically allow the software/ folder to count
+code/software/base_sys_eval_bsp/.settings/** linguist-generated
+code/software/base_sys_eval_bsp/drivers/** linguist-generated
+code/software/base_sys_eval_bsp/HAL/** linguist-generated
+code/software/base_sys_eval_bsp/obj/** linguist-generated
+
+code/software/base_sys_eval/.settings/** linguist-generated
+code/software/base_sys_eval/obj/** linguist-generated
+code/software/base_sys_eval/system/** linguist-generated
 
 # (Optional) Force SystemVerilog language tagging
 *.sv linguist-language=SystemVerilog
 *.v  linguist-language=SystemVerilog
+*.c linguist-language=C
+*.h linguist-language=C
