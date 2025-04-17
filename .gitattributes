@@ -22,9 +22,12 @@ code/simulation/** linguist-generated
 # 🧠 MANUAL OVERRIDES
 # ========================
 
+code/software/base_sys_eval/** linguist-language=SystemVerilog
+code/software/base_sys_eval_bsp/** linguist-language=C
+
 # Optional: prevent HDL from taking over if mixed into other dirs
 *.sv linguist-language=SystemVerilog
-*.v  linguist-generated
+*.v  linguist-language=SystemVerilog
 
 # Explicitly declare C headers and source
 *.c linguist-language=C
