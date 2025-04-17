@@ -22,8 +22,8 @@ code/simulation/** linguist-generated
 # 🧠 MANUAL OVERRIDES
 # ========================
 
-code/software/base_sys_eval/** linguist-language=C
-code/software/base_sys_eval_bsp/** linguist-language=SystemVerilog
+code/software/base_sys_eval/** linguist-generated
+code/software/base_sys_eval_bsp/** linguist-generated
 
 # Optional: prevent HDL from taking over if mixed into other dirs
 *.sv linguist-language=C
