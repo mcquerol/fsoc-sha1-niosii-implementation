@@ -7,7 +7,7 @@ code/incremental_db/** linguist-generated
 code/output_files/** linguist-generated
 
 # Specifically allow the software/ folder to count
-code/software/base_sys_eval_bsp/** linguist-language=SystemVerilog
+code/software/base_sys_eval_bsp/** linguist-language=C
 code/software/base_sys_eval/** linguist-language=C
 
 # Force language tagging
